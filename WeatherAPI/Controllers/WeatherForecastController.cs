@@ -13,6 +13,13 @@ namespace WeatherAPI.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        [HttpGet]
+        [Route("Test")]
+        public IActionResult Test()
+        {
+            return Ok("My Test");
+        }
+
         [EnableQuery]
         public IEnumerable<WeatherForecast> Get()
         {

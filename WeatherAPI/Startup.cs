@@ -42,7 +42,7 @@ namespace WeatherAPI
             {
                 endpoints.MapControllers();
                 endpoints.Select().Filter().OrderBy().Count().MaxTop(10);
-                endpoints.MapODataRoute("odata", "odata", GetEdmModel());
+                endpoints.MapODataRoute("odata", null, GetEdmModel());
             });
         }
 
